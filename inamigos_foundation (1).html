@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InAmigos Foundation — a volunteer-driven NGO empowering communities through education, sustainability, women empowerment, animal welfare, and youth development.">
+  <meta name="keywords" content="InAmigos Foundation, NGO, Education, Sustainability, Volunteer, Community Development, Women Empowerment, Pune">
+  <meta name="author" content="Nandini Patil">
+  <title>InAmigos Foundation | Empowering Communities Through Compassion</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       INAMIGOS FOUNDATION — Full Awareness Webpage
+       Palette : Saffron · Forest Green · Warm Cream · Charcoal
+       Fonts   : Playfair Display (display) + DM Sans (body)
+    ============================================================ */
+
+    :root {
+      --saffron:        #E8711A;
+      --saffron-light:  #F4A553;
+      --saffron-pale:   #FDF3E7;
+      --saffron-border: #F2C18A;
+      --forest:         #1E4A2E;
+      --forest-mid:     #2E6B45;
+      --forest-light:   #EBF4ED;
+      --forest-pale:    #F3FAF5;
+      --cream:          #FAF6EF;
+      --cream-dark:     #EDE6D4;
+      --charcoal:       #1C1C1C;
+      --charcoal-mid:   #3D3D3D;
+      --muted:          #7A7265;
+      --white:          #FFFFFF;
+      --pink:           #B55A8A;
+      --blue:           #3A7BD5;
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'DM Sans', sans-serif;
+      --font-mono:    'DM Mono', monospace;
+
+      --max-w: 1100px;
+      --sp:    96px 24px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--charcoal);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a   { color: inherit; }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--cream-dark); }
+    ::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 99px; }
+    ::selection { background: var(--saffron-light); color: #fff; }
+
+    /* ── UTILITY ── */
+    .container   { max-width: var(--max-w); margin: 0 auto; }
+    .section-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--saffron); margin-bottom: 14px;
+    }
+    .section-tag::before {
+      content: ''; display: block; width: 28px; height: 2px;
+      background: var(--saffron); border-radius: 2px;
+    }
+
+    /* ── SECTION H2 ── */
+    h2.title {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 3.2vw, 2.9rem);
+      font-weight: 700; line-height: 1.15;
+      color: var(--charcoal); margin-bottom: 20px;
+    }
+    h2.title.light { color: var(--white); }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-body); font-size: 0.85rem;
+      font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      border: none; border-radius: 99px; padding: 14px 30px;
+      cursor: pointer; text-decoration: none;
+      transition: transform .15s, box-shadow .2s, background .2s;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary { background: var(--saffron); color: #fff; }
+    .btn-primary:hover { background: var(--saffron-light); box-shadow: 0 8px 28px rgba(232,113,26,.35); }
+    .btn-ghost   { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.45); }
+    .btn-ghost:hover { border-color: var(--saffron-light); color: var(--saffron-light); }
+    .btn-forest  { background: var(--forest); color: #fff; }
+    .btn-forest:hover { background: var(--forest-mid); box-shadow: 0 8px 28px rgba(30,74,46,.3); }
+
+    /* ============================================================
+       ANNOUNCEMENT BANNER
+    ============================================================ */
+    .banner {
+      background: var(--saffron);
+      color: #fff;
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 10px 20px;
+    }
+    .banner strong { font-weight: 700; }
+
+    /* ============================================================
+       HEADER / NAV
+    ============================================================ */
+    header {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--forest);
+      border-bottom: 3px solid var(--saffron);
+    }
+    nav {
+      max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 14px; text-decoration: none;
+    }
+    .nav-brand img {
+      width: 46px; height: 46px; border-radius: 50%; object-fit: cover;
+      border: 2px solid var(--saffron);
+      animation: logoPulse 3s ease infinite;
+    }
+    @keyframes logoPulse {
+      0%,100% { border-color: var(--saffron); }
+      50%      { border-color: var(--saffron-light); }
+    }
+    .nav-brand h2 {
+      font-family: var(--font-display); font-size: 1.2rem; font-weight: 700;
+      color: #fff; letter-spacing: .01em;
+    }
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-links a {
+      color: rgba(255,255,255,.75); text-decoration: none; font-size: .83rem;
+      font-weight: 500; letter-spacing: .06em; text-transform: uppercase;
+      padding: 8px 14px; border-radius: 99px;
+      transition: color .2s, background .2s;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(232,113,26,.28); }
+    .nav-cta {
+      background: var(--saffron); color: #fff !important;
+      padding: 8px 18px !important; border-radius: 99px !important;
+    }
+    .nav-cta:hover { background: var(--saffron-light) !important; }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #home {
+      background: var(--forest); color: #fff;
+      padding: 80px 24px 0; position: relative; overflow: hidden;
+    }
+    #home::before {
+      content: ''; position: absolute; top: -100px; right: -100px;
+      width: 560px; height: 560px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,113,26,.16) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    #home::after {
+      content: '"'; position: absolute; bottom: 60px; left: -30px;
+      font-family: var(--font-display); font-size: 380px;
+      color: rgba(255,255,255,.035); line-height: 1;
+      pointer-events: none; user-select: none;
+    }
+    .hero-inner {
+      max-width: var(--max-w); margin: 0 auto; position: relative;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: .75rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--saffron-light);
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow span {
+      width: 28px; height: 2px; background: var(--saffron-light);
+      display: block; border-radius: 2px;
+    }
+    #home h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5.5vw, 4.4rem);
+      font-weight: 900; line-height: 1.08; letter-spacing: -.02em;
+      max-width: 760px; animation: fadeUp .75s ease both;
+    }
+    #home h1 em { font-style: italic; color: var(--saffron-light); }
+    .hero-sub {
+      margin: 28px 0 44px; font-size: 1.08rem;
+      color: rgba(255,255,255,.68); font-weight: 300;
+      max-width: 520px; line-height: 1.85;
+      animation: fadeUp .75s .15s ease both;
+    }
+    .hero-btns {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      animation: fadeUp .75s .28s ease both;
+    }
+    .hero-stats {
+      display: flex; gap: 48px; margin-top: 56px; padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      animation: fadeUp .75s .4s ease both;
+    }
+    .hero-stat-num {
+      font-family: var(--font-display); font-size: 2.4rem; font-weight: 900;
+      color: var(--saffron-light); line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: .82rem; color: rgba(255,255,255,.55);
+      text-transform: uppercase; letter-spacing: .08em; margin-top: 4px;
+    }
+    .hero-img-wrap {
+      max-width: var(--max-w); margin: 48px auto 0; position: relative;
+      animation: fadeUp .9s .45s ease both;
+    }
+    .hero-img-wrap img {
+      width: 100%; max-height: 500px; object-fit: cover;
+      border-radius: 20px 20px 0 0;
+    }
+    .hero-img-wrap::after {
+      content: ''; position: absolute; inset: 0;
+      border-radius: 20px 20px 0 0;
+      background: linear-gradient(to top, rgba(30,74,46,.45) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================================
+       HASHTAG / SOCIAL STRIP
+    ============================================================ */
+    .hashtag-strip {
+      background: var(--charcoal); padding: 18px 24px; overflow: hidden;
+    }
+    .hashtag-track {
+      display: flex; gap: 36px; align-items: center;
+      animation: scrollTags 22s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes scrollTags {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .hashtag-strip:hover .hashtag-track { animation-play-state: paused; }
+    .htag {
+      font-size: .82rem; font-weight: 600; letter-spacing: .06em;
+      color: var(--saffron-light); text-decoration: none;
+      font-family: var(--font-mono);
+    }
+    .htag-dot { color: rgba(255,255,255,.15); font-size: 1.2rem; }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    #about { background: var(--white); padding: var(--sp); }
+    .about-grid {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+    }
+    .about-img-wrap { position: relative; }
+    .about-img-wrap img {
+      width: 100%; height: 440px; object-fit: cover;
+      border-radius: 20px; border: 4px solid var(--cream-dark);
+    }
+    .about-badge {
+      position: absolute; bottom: -20px; right: -20px;
+      background: var(--saffron); color: #fff;
+      border-radius: 16px; padding: 18px 24px;
+      text-align: center; box-shadow: 0 12px 32px rgba(232,113,26,.35);
+    }
+    .about-badge-num {
+      font-family: var(--font-display); font-size: 2rem; font-weight: 900; line-height: 1;
+    }
+    .about-badge-label {
+      font-size: .72rem; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; opacity: .85; margin-top: 4px;
+    }
+    .about-text p {
+      font-size: .98rem; color: var(--charcoal-mid); line-height: 1.9; margin-bottom: 18px;
+    }
+    .about-pillars {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px;
+    }
+    .pillar-pill {
+      background: var(--forest-light); color: var(--forest);
+      border: 1.5px solid #c3dfc9; border-radius: 99px;
+      font-size: .8rem; font-weight: 600; padding: 8px 16px;
+    }
+
+    /* ============================================================
+       PROJECTS
+    ============================================================ */
+    #projects { background: var(--cream); padding: var(--sp); }
+    .projects-header { max-width: var(--max-w); margin: 0 auto 56px; }
+    .projects-grid {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    }
+    .project-card {
+      background: var(--white); border-radius: 20px; overflow: hidden;
+      border: 1.5px solid var(--cream-dark);
+      display: flex; flex-direction: column;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .project-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 24px 56px rgba(30,74,46,.12);
+    }
+    .project-card img {
+      width: 100%; height: 220px; object-fit: cover;
+    }
+    .project-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+    .project-tag {
+      display: inline-block; border-radius: 99px;
+      font-size: .68rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; padding: 5px 12px; margin-bottom: 14px; align-self: flex-start;
+    }
+    .tag-seva    { background: var(--saffron-pale); color: var(--saffron); border: 1px solid var(--saffron-border); }
+    .tag-edu     { background: var(--forest-pale);  color: var(--forest-mid); border: 1px solid #c3dfc9; }
+    .tag-udaan   { background: #F9ECF4; color: var(--pink); border: 1px solid #e8bcd8; }
+    .tag-env     { background: #F0F7E6; color: #4A7C1F; border: 1px solid #c6dea0; }
+    .tag-animal  { background: #FFF4E8; color: #B46A1A; border: 1px solid #f2c18a; }
+
+    .project-card h3 {
+      font-family: var(--font-display); font-size: 1.3rem; font-weight: 700;
+      color: var(--charcoal); margin-bottom: 10px;
+    }
+    .project-card p { font-size: .92rem; color: var(--muted); line-height: 1.8; flex: 1; }
+    .project-impact {
+      margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--cream-dark);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .impact-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .dot-seva   { background: var(--saffron); }
+    .dot-edu    { background: var(--forest-mid); }
+    .dot-udaan  { background: var(--pink); }
+    .dot-env    { background: #4A7C1F; }
+    .dot-animal { background: #B46A1A; }
+    .project-impact span { font-size: .82rem; color: var(--muted); font-style: italic; }
+
+    /* ============================================================
+       SOCIAL IMPACT — FULL SECTION
+    ============================================================ */
+    #impact-full {
+      background: var(--forest); color: #fff; padding: var(--sp);
+    }
+    .impact-full-header { max-width: var(--max-w); margin: 0 auto 56px; }
+    .impact-full-header p {
+      font-size: 1rem; color: rgba(255,255,255,.65); max-width: 520px; margin-top: 12px;
+    }
+    .impact-big-grid {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+    }
+    .impact-big-card {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 20px; padding: 36px; position: relative; overflow: hidden;
+      transition: background .25s;
+    }
+    .impact-big-card:hover { background: rgba(255,255,255,.1); }
+    .impact-big-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 4px; height: 100%;
+    }
+    .ibc-saffron::before { background: var(--saffron); }
+    .ibc-green::before   { background: #5DBF82; }
+    .ibc-pink::before    { background: var(--pink); }
+    .ibc-blue::before    { background: var(--blue); }
+
+    .impact-icon {
+      font-size: 2.4rem; margin-bottom: 16px; line-height: 1;
+    }
+    .impact-big-card h3 {
+      font-family: var(--font-display); font-size: 1.2rem; font-weight: 700;
+      color: #fff; margin-bottom: 12px;
+    }
+    .impact-big-card p { font-size: .9rem; color: rgba(255,255,255,.62); line-height: 1.85; }
+    .impact-big-card ul {
+      margin-top: 14px; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 8px;
+    }
+    .impact-big-card ul li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: .88rem; color: rgba(255,255,255,.6);
+    }
+    .impact-big-card ul li::before {
+      content: '→'; color: var(--saffron-light); flex-shrink: 0; font-weight: 700;
+    }
+
+    /* stat bar */
+    .impact-stats-row {
+      max-width: var(--max-w); margin: 48px auto 0;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: rgba(255,255,255,.08);
+      border-radius: 16px; overflow: hidden;
+    }
+    .istat {
+      background: rgba(255,255,255,.04); padding: 28px 24px; text-align: center;
+    }
+    .istat-num {
+      font-family: var(--font-display); font-size: 2.2rem; font-weight: 900;
+      color: var(--saffron-light); line-height: 1;
+    }
+    .istat-label {
+      font-size: .75rem; color: rgba(255,255,255,.5);
+      text-transform: uppercase; letter-spacing: .08em; margin-top: 6px;
+    }
+
+    /* ============================================================
+       GALLERY
+    ============================================================ */
+    #gallery { background: var(--cream-dark); padding: var(--sp); }
+    .gallery-header { max-width: var(--max-w); margin: 0 auto 48px; }
+    .gallery-header p { font-size: .98rem; color: var(--muted); max-width: 480px; margin-top: 10px; }
+    .gallery-mosaic {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 260px 200px;
+      gap: 14px;
+    }
+    .g-img {
+      border-radius: 14px; overflow: hidden;
+      position: relative; cursor: pointer;
+    }
+    .g-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .4s, filter .4s;
+      filter: brightness(.88) saturate(.75);
+    }
+    .g-img:hover img { transform: scale(1.05); filter: brightness(1) saturate(1.15); }
+    .g-img::after {
+      content: attr(data-caption);
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(30,74,46,.8) 0%, transparent 100%);
+      color: #fff; font-size: .78rem; font-weight: 500;
+      padding: 28px 16px 14px;
+      opacity: 0; transition: opacity .3s;
+      border-radius: 0 0 14px 14px;
+    }
+    .g-img:hover::after { opacity: 1; }
+    .g-img:nth-child(1) { grid-column: span 2; }
+    .g-img:nth-child(4) { grid-column: span 2; }
+
+    /* ============================================================
+       VOLUNTEER / CTA SECTION
+    ============================================================ */
+    #volunteer { background: var(--white); padding: var(--sp); }
+    .volunteer-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+    }
+    .volunteer-text p {
+      font-size: .98rem; color: var(--charcoal-mid); line-height: 1.9; margin-bottom: 16px;
+    }
+    .volunteer-ways {
+      display: flex; flex-direction: column; gap: 14px; margin-top: 28px;
+    }
+    .volunteer-way {
+      display: flex; align-items: center; gap: 16px;
+      background: var(--forest-pale); border: 1.5px solid #c3dfc9;
+      border-radius: 14px; padding: 18px 20px;
+    }
+    .way-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .way-title { font-weight: 600; font-size: .95rem; color: var(--forest); }
+    .way-desc  { font-size: .82rem; color: var(--muted); margin-top: 2px; }
+
+    /* Form */
+    .volunteer-form-wrap {
+      background: var(--saffron-pale); border: 2px solid var(--saffron-border);
+      border-radius: 20px; padding: 40px;
+    }
+    .volunteer-form-wrap h3 {
+      font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;
+      color: var(--charcoal); margin-bottom: 6px;
+    }
+    .volunteer-form-wrap .form-sub {
+      font-size: .88rem; color: var(--muted); margin-bottom: 28px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+    .form-group label { font-size: .8rem; font-weight: 600; color: var(--charcoal-mid); letter-spacing: .04em; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: var(--font-body); font-size: .95rem;
+      background: var(--white); color: var(--charcoal);
+      border: 1.5px solid var(--cream-dark); border-radius: 10px;
+      padding: 12px 16px; outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--saffron); box-shadow: 0 0 0 3px rgba(232,113,26,.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-submit {
+      width: 100%; padding: 15px; margin-top: 6px;
+      background: var(--saffron); color: #fff;
+      border: none; border-radius: 99px; cursor: pointer;
+      font-family: var(--font-body); font-size: .9rem; font-weight: 700;
+      letter-spacing: .06em; text-transform: uppercase;
+      transition: background .2s, box-shadow .2s;
+    }
+    .form-submit:hover {
+      background: var(--saffron-light);
+      box-shadow: 0 8px 28px rgba(232,113,26,.35);
+    }
+
+    /* ============================================================
+       CAMPAIGNS / SOCIAL PROOF
+    ============================================================ */
+    #campaigns { background: var(--cream); padding: var(--sp); }
+    .campaigns-header { max-width: var(--max-w); margin: 0 auto 48px; }
+    .campaigns-grid {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .campaign-card {
+      background: var(--white); border-radius: 16px;
+      border: 1.5px solid var(--cream-dark); padding: 28px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .campaign-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.07);
+    }
+    .campaign-hashtag {
+      font-family: var(--font-mono); font-size: .8rem;
+      color: var(--saffron); font-weight: 600; margin-bottom: 12px;
+    }
+    .campaign-card h3 {
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 700;
+      color: var(--charcoal); margin-bottom: 10px;
+    }
+    .campaign-card p { font-size: .88rem; color: var(--muted); line-height: 1.8; }
+    .campaign-meta {
+      margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--cream-dark);
+      font-size: .78rem; color: rgba(122,114,101,.7);
+      font-family: var(--font-mono);
+    }
+
+    /* ============================================================
+       BIG CTA BANNER
+    ============================================================ */
+    #join {
+      background: var(--saffron-pale);
+      border-top: 3px solid var(--saffron);
+      border-bottom: 3px solid var(--saffron);
+      padding: 96px 24px; text-align: center;
+    }
+    #join h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-style: italic; font-weight: 900;
+      color: var(--forest); max-width: 700px; margin: 0 auto 16px;
+      line-height: 1.15;
+    }
+    #join p { max-width: 500px; margin: 0 auto 36px; color: var(--charcoal-mid); font-size: 1.05rem; }
+    .join-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer { background: var(--charcoal); color: rgba(255,255,255,.6); padding: 64px 24px 36px; }
+    .footer-grid {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+    }
+    footer h2 {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 700;
+      color: #fff; margin-bottom: 6px;
+    }
+    .footer-tagline {
+      font-size: .72rem; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--saffron); margin-bottom: 14px;
+    }
+    footer > .footer-grid > div:first-child p {
+      font-size: .88rem; color: rgba(255,255,255,.45); line-height: 1.85;
+    }
+    .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+    .soc-btn {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .72rem; font-weight: 700; color: rgba(255,255,255,.55);
+      text-decoration: none; transition: border-color .2s, color .2s;
+    }
+    .soc-btn:hover { border-color: var(--saffron); color: var(--saffron); }
+    .footer-col h4 {
+      font-size: .72rem; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: #fff; margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block; color: rgba(255,255,255,.45); text-decoration: none;
+      font-size: .86rem; margin-bottom: 10px; transition: color .2s;
+    }
+    .footer-col a:hover { color: var(--saffron-light); }
+    .footer-divider {
+      max-width: var(--max-w); margin: 48px auto 24px;
+      border: none; border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .footer-copy {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-copy p { font-size: .78rem; color: rgba(255,255,255,.28); }
+    .footer-copy span { font-family: var(--font-mono); font-size: .7rem; color: rgba(255,255,255,.2); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 960px) {
+      :root { --sp: 64px 20px; }
+      .nav-links { display: none; }
+      .about-grid,
+      .volunteer-inner,
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .projects-grid,
+      .campaigns-grid { grid-template-columns: 1fr; }
+      .impact-big-grid { grid-template-columns: 1fr; }
+      .impact-stats-row { grid-template-columns: repeat(2,1fr); }
+      .gallery-mosaic { grid-template-columns: repeat(2,1fr); grid-template-rows: auto; }
+      .g-img:nth-child(1),
+      .g-img:nth-child(4) { grid-column: span 2; }
+      .g-img { height: 200px; }
+      .about-badge { bottom: -14px; right: -6px; }
+      .footer-copy { flex-direction: column; gap: 8px; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-stats { flex-wrap: wrap; gap: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BANNER -->
+<div class="banner">
+  🌱 <strong>Calling All Changemakers!</strong> — Join our volunteer drive and be part of something meaningful. #InAmigos #UnitingMindsForChange
+</div>
+
+<!-- HEADER -->
+<header>
+  <nav>
+    <a href="#home" class="nav-brand">
+      <img src="Images/inamigos_foundation_logo.jpg" alt="InAmigos Foundation Logo">
+      <h2>InAmigos Foundation</h2>
+    </a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#impact-full">Impact</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#campaigns">Campaigns</a>
+      <a href="#contact">Contact</a>
+      <a href="#volunteer" class="nav-cta">Volunteer</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section id="home">
+    <div class="hero-inner">
+      <div class="hero-eyebrow"><span></span>Since 2020 · Pune, India</div>
+      <h1>Creating Impact Through<br><em>Compassion</em> &amp;<br>Community Action</h1>
+      <p class="hero-sub">
+        A volunteer-driven non-profit empowering lives through education,
+        environmental sustainability, women empowerment, animal welfare,
+        and youth development.
+      </p>
+      <div class="hero-btns">
+        <a href="#volunteer" class="btn btn-primary">🤝 Become a Volunteer</a>
+        <a href="#projects" class="btn btn-ghost">Explore Projects</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">500+</div>
+          <div class="hero-stat-label">Volunteers</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">10K+</div>
+          <div class="hero-stat-label">Lives Touched</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">5+</div>
+          <div class="hero-stat-label">Active Projects</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">3+</div>
+          <div class="hero-stat-label">Years of Service</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="Images/hero_image.jpg" alt="Volunteers participating in community development activities">
+    </div>
+  </section>
+
+  <!-- HASHTAG STRIP -->
+  <div class="hashtag-strip" aria-hidden="true">
+    <div class="hashtag-track">
+      <a href="#" class="htag">#InAmigos</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#UnitingMindsForChange</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#ProjectSEVA</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#Bachpanshala</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#ProjectUDAAAN</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#VolunteerForChange</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#CommunityFirst</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#WomenEmpowerment</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#SustainableFuture</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#InAmigos</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#UnitingMindsForChange</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#ProjectSEVA</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#Bachpanshala</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#ProjectUDAAAN</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#VolunteerForChange</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#CommunityFirst</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#WomenEmpowerment</a><span class="htag-dot">·</span>
+      <a href="#" class="htag">#SustainableFuture</a><span class="htag-dot">·</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img src="Images/about.jpg" alt="InAmigos volunteers serving communities">
+        <div class="about-badge">
+          <div class="about-badge-num">500+</div>
+          <div class="about-badge-label">Active Volunteers</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="title">About InAmigos Foundation</h2>
+        <p>
+          <strong>InAmigos Foundation</strong> is a volunteer-driven non-profit organisation
+          founded with a deep commitment to creating meaningful social impact across India.
+          We bring together passionate individuals who believe in the power of collective action.
+        </p>
+        <p>
+          Through structured programs in education, environmental conservation, women empowerment,
+          youth engagement, and animal welfare, we work at the grassroots level to address
+          real challenges faced by underserved communities.
+        </p>
+        <p>
+          Our mission is to inspire individuals to contribute towards a compassionate, inclusive,
+          and sustainable future — by working together for positive, lasting change.
+        </p>
+        <div class="about-pillars">
+          <span class="pillar-pill">📚 Education</span>
+          <span class="pillar-pill">🌿 Environment</span>
+          <span class="pillar-pill">👩 Women Empowerment</span>
+          <span class="pillar-pill">🐾 Animal Welfare</span>
+          <span class="pillar-pill">🤝 Community Service</span>
+          <span class="pillar-pill">🌟 Youth Development</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROJECTS ═══════════════ -->
+  <section id="projects">
+    <div class="projects-header">
+      <span class="section-tag">What We Do</span>
+      <h2 class="title">Our Ongoing Projects</h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img src="Images/project1.jpg" alt="Food distribution drive — Project SEVA">
+        <div class="project-body">
+          <span class="project-tag tag-seva">Community Service</span>
+          <h3>Project SEVA</h3>
+          <p>
+            Supporting underprivileged families through food distribution drives,
+            clothing donations, essential supply camps, and festive celebrations
+            for those who need it most.
+          </p>
+          <div class="project-impact">
+            <div class="impact-dot dot-seva"></div>
+            <span>Providing dignity and basic needs to families in need</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Images/image4.jpg" alt="Children learning — Project Bachpanshala">
+        <div class="project-body">
+          <span class="project-tag tag-edu">Education</span>
+          <h3>Project BACHPANSHALA</h3>
+          <p>
+            Providing educational opportunities, digital literacy programs,
+            and skill development workshops for children from underserved
+            backgrounds — nurturing the leaders of tomorrow.
+          </p>
+          <div class="project-impact">
+            <div class="impact-dot dot-edu"></div>
+            <span>Bridging the education gap for hundreds of children</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Images/project3.jpg" alt="Women empowerment — Project UDAAN">
+        <div class="project-body">
+          <span class="project-tag tag-udaan">Women Empowerment</span>
+          <h3>Project UDAAN</h3>
+          <p>
+            Empowering women through entrepreneurship workshops, vocational training,
+            leadership development sessions, and financial awareness programs
+            for long-term independence.
+          </p>
+          <div class="project-impact">
+            <div class="impact-dot dot-udaan"></div>
+            <span>Helping women achieve financial freedom and confidence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Images/Image3.jpg" alt="Tree Plantation Drive">
+        <div class="project-body">
+          <span class="project-tag tag-env">Environment</span>
+          <h3>Green Earth Drive</h3>
+          <p>
+            Organising tree plantation drives, cleanliness campaigns,
+            and environmental awareness activities to build a sustainable
+            and greener future for coming generations.
+          </p>
+          <div class="project-impact">
+            <div class="impact-dot dot-env"></div>
+            <span>Planting seeds of sustainability in communities</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Images/Image2.jpg" alt="Animal Welfare Initiative">
+        <div class="project-body">
+          <span class="project-tag tag-animal">Animal Welfare</span>
+          <h3>Paws &amp; Care</h3>
+          <p>
+            Feeding, rescuing, and providing basic medical support to stray animals.
+            Raising community awareness around animal welfare and responsible
+            co-existence with all living beings.
+          </p>
+          <div class="project-impact">
+            <div class="impact-dot dot-animal"></div>
+            <span>Giving voice to those who cannot speak for themselves</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Images/Image1.jpg" alt="Youth Development Program">
+        <div class="project-body">
+          <span class="project-tag tag-edu">Youth Development</span>
+          <h3>Young Leaders Program</h3>
+          <p>
+            Mentoring youth through personality development workshops,
+            career guidance, volunteer training, and leadership activities
+            that shape responsible citizens and future changemakers.
+          </p>
+          <div class="project-impact">
+            <div class="impact-dot dot-edu"></div>
+            <span>Grooming the next generation of compassionate leaders</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ SOCIAL IMPACT ═══════════════ -->
+  <section id="impact-full">
+    <div class="impact-full-header container">
+      <span class="section-tag" style="color:var(--saffron-light);">Why It Matters</span>
+      <h2 class="title light">Social Impact &amp; Purpose</h2>
+      <p>Every initiative we run is designed to address a real, pressing need in our communities.</p>
+    </div>
+
+    <div class="impact-big-grid container">
+
+      <div class="impact-big-card ibc-saffron">
+        <div class="impact-icon">📚</div>
+        <h3>Education &amp; Skill Development</h3>
+        <p>Access to quality education is a fundamental right. We bridge the learning gap for children and youth who face barriers to formal schooling.</p>
+        <ul>
+          <li>Digital literacy &amp; computer education</li>
+          <li>After-school tutoring and mentorship</li>
+          <li>Vocational and soft-skills training</li>
+          <li>Encouraging girls to stay in school</li>
+        </ul>
+      </div>
+
+      <div class="impact-big-card ibc-green">
+        <div class="impact-icon">🌿</div>
+        <h3>Environmental Sustainability</h3>
+        <p>We work to protect our planet through active community participation in conservation, cleanliness, and eco-awareness.</p>
+        <ul>
+          <li>Mass tree plantation drives</li>
+          <li>Cleanliness campaigns in public spaces</li>
+          <li>Plastic-free awareness programs</li>
+          <li>Teaching sustainable habits to youth</li>
+        </ul>
+      </div>
+
+      <div class="impact-big-card ibc-pink">
+        <div class="impact-icon">👩‍💼</div>
+        <h3>Women Empowerment</h3>
+        <p>We believe in a world where every woman has the tools, confidence, and opportunity to lead a self-sufficient life.</p>
+        <ul>
+          <li>Financial literacy &amp; entrepreneurship</li>
+          <li>Vocational skill training workshops</li>
+          <li>Leadership &amp; confidence building</li>
+          <li>Safe spaces for women to share &amp; grow</li>
+        </ul>
+      </div>
+
+      <div class="impact-big-card ibc-blue">
+        <div class="impact-icon">🤝</div>
+        <h3>Community &amp; Animal Welfare</h3>
+        <p>From feeding families to caring for stray animals, we show up wherever compassion is needed most.</p>
+        <ul>
+          <li>Food and clothing donation drives</li>
+          <li>Festival celebrations for underprivileged</li>
+          <li>Medical aid &amp; feeding for stray animals</li>
+          <li>Youth volunteer training &amp; engagement</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="impact-stats-row">
+      <div class="istat">
+        <div class="istat-num">500+</div>
+        <div class="istat-label">Volunteers</div>
+      </div>
+      <div class="istat">
+        <div class="istat-num">10K+</div>
+        <div class="istat-label">Lives Impacted</div>
+      </div>
+      <div class="istat">
+        <div class="istat-num">50+</div>
+        <div class="istat-label">Campaigns Run</div>
+      </div>
+      <div class="istat">
+        <div class="istat-num">6+</div>
+        <div class="istat-label">Active Projects</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ GALLERY ═══════════════ -->
+  <section id="gallery">
+    <div class="gallery-header container">
+      <span class="section-tag">Moments That Matter</span>
+      <h2 class="title">Our Gallery</h2>
+      <p>A glimpse into our volunteers, community drives, educational programs, and environmental campaigns.</p>
+    </div>
+    <div class="gallery-mosaic container">
+      <div class="g-img" data-caption="Volunteer Activity">
+        <img src="Images/Image1.jpg" alt="Volunteer Activity">
+      </div>
+      <div class="g-img" data-caption="Education Campaign">
+        <img src="Images/Image2.jpg" alt="Education Campaign">
+      </div>
+      <div class="g-img" data-caption="Tree Plantation Drive">
+        <img src="Images/Image3.jpg" alt="Tree Plantation Drive">
+      </div>
+      <div class="g-img" data-caption="Community Outreach">
+        <img src="Images/Image4.jpg" alt="Community Outreach Program">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ VOLUNTEER FORM ═══════════════ -->
+  <section id="volunteer">
+    <div class="volunteer-inner container">
+      <div class="volunteer-text">
+        <span class="section-tag">Get Involved</span>
+        <h2 class="title">Join Our Volunteer Community</h2>
+        <p>
+          At InAmigos Foundation, every volunteer is a changemaker.
+          Whether you have an hour a week or a whole weekend, your time
+          and skills can make a real difference in someone's life.
+        </p>
+        <p>
+          We welcome students, working professionals, homemakers, retirees —
+          anyone who carries a desire to serve and grow.
+        </p>
+        <div class="volunteer-ways">
+          <div class="volunteer-way">
+            <div class="way-icon">📢</div>
+            <div>
+              <div class="way-title">Spread Awareness</div>
+              <div class="way-desc">Share our campaigns on social media and help us reach more people</div>
+            </div>
+          </div>
+          <div class="volunteer-way">
+            <div class="way-icon">🙌</div>
+            <div>
+              <div class="way-title">On-Ground Volunteering</div>
+              <div class="way-desc">Participate in food drives, plantation drives, and community events</div>
+            </div>
+          </div>
+          <div class="volunteer-way">
+            <div class="way-icon">💡</div>
+            <div>
+              <div class="way-title">Skill-Based Support</div>
+              <div class="way-desc">Contribute your expertise in design, content, tech, or teaching</div>
+            </div>
+          </div>
+          <div class="volunteer-way">
+            <div class="way-icon">💛</div>
+            <div>
+              <div class="way-title">Donate &amp; Support</div>
+              <div class="way-desc">Fund a drive, sponsor a child's education, or donate materials</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="volunteer-form-wrap">
+        <h3>Ready to Join Us?</h3>
+        <p class="form-sub">Fill in your details and we'll get back to you within 48 hours.</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Priya">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Sharma">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="priya@email.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+91 98765 43210">
+        </div>
+        <div class="form-group">
+          <label for="interest">I Want to Help With</label>
+          <select id="interest">
+            <option value="">— Select an area —</option>
+            <option>Education &amp; Tutoring</option>
+            <option>Food &amp; Clothing Drives</option>
+            <option>Women Empowerment</option>
+            <option>Environmental Drives</option>
+            <option>Animal Welfare</option>
+            <option>Social Media &amp; Content</option>
+            <option>Design &amp; Tech Support</option>
+            <option>General Volunteering</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Anything you'd like to share?</label>
+          <textarea id="message" placeholder="Tell us a little about yourself and your motivation to volunteer..."></textarea>
+        </div>
+        <button class="form-submit" type="button">🌟 Submit &amp; Join the Movement</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CAMPAIGNS ═══════════════ -->
+  <section id="campaigns">
+    <div class="campaigns-header container">
+      <span class="section-tag">Social Media Campaigns</span>
+      <h2 class="title">Follow Our Campaigns</h2>
+    </div>
+    <div class="campaigns-grid container">
+
+      <div class="campaign-card">
+        <div class="campaign-hashtag">#InAmigos · #ProjectSEVA</div>
+        <h3>Feeding Families This Season</h3>
+        <p>Our SEVA volunteers distributed meals and essential supplies to over 200 families. Every meal served is a step towards dignity and care.</p>
+        <div class="campaign-meta">🌐 Instagram · LinkedIn · Facebook</div>
+      </div>
+
+      <div class="campaign-card">
+        <div class="campaign-hashtag">#Bachpanshala · #EducationForAll</div>
+        <h3>Bachpanshala Learning Camps</h3>
+        <p>Weekend learning camps bringing digital literacy and creative education to children who lack access to quality schooling.</p>
+        <div class="campaign-meta">🌐 Instagram · LinkedIn · Facebook</div>
+      </div>
+
+      <div class="campaign-card">
+        <div class="campaign-hashtag">#ProjectUDAAAN · #WomenEmpowerment</div>
+        <h3>Udaan Workshop Series</h3>
+        <p>Monthly skill workshops helping women discover their entrepreneurial potential, learn new trades, and gain financial confidence.</p>
+        <div class="campaign-meta">🌐 Instagram · LinkedIn · Facebook</div>
+      </div>
+
+      <div class="campaign-card">
+        <div class="campaign-hashtag">#GreenEarth · #SustainableFuture</div>
+        <h3>Planting 1000 Trees Together</h3>
+        <p>Our volunteers came together for a mass tree plantation drive — one sapling at a time, building a greener tomorrow for all.</p>
+        <div class="campaign-meta">🌐 Instagram · LinkedIn · Facebook</div>
+      </div>
+
+      <div class="campaign-card">
+        <div class="campaign-hashtag">#PawsAndCare · #AnimalWelfare</div>
+        <h3>Feeding Strays Every Sunday</h3>
+        <p>Every Sunday, InAmigos volunteers hit the streets to feed, care for, and raise awareness about the welfare of stray animals.</p>
+        <div class="campaign-meta">🌐 Instagram · LinkedIn · Facebook</div>
+      </div>
+
+      <div class="campaign-card">
+        <div class="campaign-hashtag">#VolunteerForChange · #YouthLeaders</div>
+        <h3>Young Leaders Initiative</h3>
+        <p>Empowering college students and young professionals to lead community drives, develop skills, and grow into responsible changemakers.</p>
+        <div class="campaign-meta">🌐 Instagram · LinkedIn · Facebook</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ BIG CTA ═══════════════ -->
+  <section id="join">
+    <h2>Every Small Action Creates a Lasting Impact.</h2>
+    <p>
+      Join our volunteer community and help us build stronger, happier,
+      and more sustainable communities — one step at a time.
+    </p>
+    <div class="join-btns">
+      <a href="#volunteer" class="btn btn-forest">🤝 Join Us Today</a>
+      <a href="mailto:info@inamigosfoundation.org.in" class="btn btn-primary">📩 Get in Touch</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <h2>InAmigos Foundation</h2>
+      <p class="footer-tagline">Uniting Minds for Change</p>
+      <p>
+        Empowering communities through education, sustainability,
+        volunteerism, and social responsibility. Together, we build
+        a kinder, more inclusive world.
+      </p>
+      <div class="footer-social">
+        <a href="#" class="soc-btn" aria-label="Instagram">Ig</a>
+        <a href="#" class="soc-btn" aria-label="LinkedIn">Li</a>
+        <a href="#" class="soc-btn" aria-label="Facebook">Fb</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About Us</a>
+      <a href="#projects">Our Projects</a>
+      <a href="#impact-full">Social Impact</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#campaigns">Campaigns</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <a href="#volunteer">Volunteer</a>
+      <a href="#volunteer">Donate</a>
+      <a href="#volunteer">Partner With Us</a>
+      <a href="#campaigns">Spread Awareness</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:info@inamigosfoundation.org.in">info@inamigosfoundation.org.in</a>
+      <a href="https://www.inamigosfoundation.org.in" target="_blank">www.inamigosfoundation.org.in</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-copy">
+    <p>&copy; 2026 InAmigos Foundation. All Rights Reserved.</p>
+    <span>Built with 💛 for the community · #UnitingMindsForChange</span>
+  </div>
+</footer>
+
+</body>
+</html>
